@@ -74,10 +74,9 @@ class TextFormatter(QWidget):
     def __on_save_file_clicked(self):
         # Open file dialog to save the formatted text
         file_path, _ = QFileDialog.getSaveFileUrl(self, "Save", filter="Text Files (*.txt);;All Files (*)")
-        if file_path:
-            with open(file_path, 'w') as file:
+        if file_path.isValid():
+            with open(file_path.toLocalFile(), 'w') as file:
                 file.write(self.text_edit.toPlainText())
-
 
 
 if __name__ == "__main__":
