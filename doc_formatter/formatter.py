@@ -35,7 +35,7 @@ def format_bytes(lines_per_paragraph, source_buffer: BufferedReader) -> bytearra
         raise ValueError("lines_per_paragraph must be greater than 0")
     
     if not source_buffer:
-        raise ValueError("source_file must be provided")
+        raise ValueError("source_buffer must be provided")
         
     new_paragraph = False
     lines_read = 0
