@@ -77,11 +77,3 @@ class TextFormatter(QWidget):
         if file_path.isValid():
             with open(file_path.toLocalFile(), 'w') as file:
                 file.write(self.text_edit.toPlainText())
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = TextFormatter()
-    window.text_edit.copy()
-    window.show()
-    sys.exit(app.exec_())
